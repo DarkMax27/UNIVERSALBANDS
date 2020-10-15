@@ -1,0 +1,17 @@
+https://laravel.com/docs/8.x/eloquent-relationships
+
+Eloquent: Relationships
+Introduction
+Defining Relationships
+One To One
+One To Many
+One To Many (Inverse)
+Many To Many
+Defining Custom Intermediate Table Models
+Has One Through
+Has Many Through
+Polymorphic Relationships
+One To One
+One To Many
+Many To Many
+Custom Polymorphic Types

@@ -1,0 +1,10 @@
+clonar el repositorio dentro de la carpeta que quieras xd
+
+para subir usar 
+git init (1 necesario)
+git add -A (2 necesario)
+git status (Solo es para verificar)
+git commit -m "Version" (3 necesario)
+git remote add origin https://github.com/DarkMax27/UNIVERSALBANDS.git (Solo una vez se usa ya las demas veces no)
+git pull (4 necesario)
+git push (5 necesario)
