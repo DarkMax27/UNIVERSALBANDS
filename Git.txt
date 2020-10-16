@@ -1,6 +1,9 @@
 PERDON POR MI FALTA DE ORTOGRAFIA D:
 clonar el repositorio dentro de la carpeta que quieras xd
 Accede a la carpeta que se creo al clonarse (si te falla ala tratar de subir un cambio puede ser eso)
+Antes de hacer esto debes de usar git pull pero ten encuenta que talvez se borren tus archivos 
+aparte debes de hacer esto para no borrar los archivos de otros
+mejor avisa en whatsapp que vas a commitear algo >:v
 
 para subir usar 
 git init (1 necesario)
