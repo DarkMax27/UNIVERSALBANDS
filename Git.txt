@@ -1,4 +1,5 @@
 clonar el repositorio dentro de la carpeta que quieras xd
+Accede a la carpeta que se creo al clonarse (si te falla ala tratar de subir un cambio puede ser eso)
 
 para subir usar 
 git init (1 necesario)
