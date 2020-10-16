@@ -1,3 +1,4 @@
+PERDON POR MI FALTA DE ORTOGRAFIA D:
 clonar el repositorio dentro de la carpeta que quieras xd
 Accede a la carpeta que se creo al clonarse (si te falla ala tratar de subir un cambio puede ser eso)
 
@@ -7,7 +8,7 @@ git add -A (2 necesario)
 git status (Solo es para verificar)
 git commit -m "Version" (3 necesario)
 git remote add origin https://github.com/DarkMax27/UNIVERSALBANDS.git (Solo una vez se usa ya las demas veces no)
-git pull (4 necesario)
+git pull (no creo que sea necesario prueben no utilizar este y si no da error es que no es necesario)
 git push (5 necesario)
 
 Para meter los cambios hechos por los demas en tu carpeta (actualizar tu carpeta con el repositorio local)
