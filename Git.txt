@@ -9,3 +9,6 @@ git commit -m "Version" (3 necesario)
 git remote add origin https://github.com/DarkMax27/UNIVERSALBANDS.git (Solo una vez se usa ya las demas veces no)
 git pull (4 necesario)
 git push (5 necesario)
+
+Para meter los cambios hechos por los demas en tu carpeta (actualizar tu carpeta con el repositorio local)
+git pull (Ya esta)
