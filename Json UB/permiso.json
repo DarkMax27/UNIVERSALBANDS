@@ -1,0 +1,36 @@
+{"model_name":"Permiso",
+    "soft_deletes":"yes",
+    "pk":"id",
+    "localize":"yes",
+    "table":"permisos",
+    "fields":[
+        {
+
+            "name": "tipoPermiso",
+            "type": "string"
+        },
+        {
+            "name": "descripcionPermiso",
+            "type": "text"
+
+        }
+    ],
+    "relationships": [
+        {
+            "type": "hasMany",
+            "name": "Usuario",
+            "class": "App\\Usuario"
+        }
+    ],
+    "validations": [
+        {
+            "field": "tipoPermiso",
+            "rules": "required|min:5"
+        },
+        {
+            "field": "descripcionPermiso",
+            "rules": "required|min:5"
+        }
+    ]
+
+}

@@ -1,0 +1,92 @@
+{"model_name":"Usuario",
+    "soft_deletes":"yes",
+    "pk":"id",
+    "localize":"yes",
+    "table":"usuarios",
+    "fields":[
+        {
+
+            "name": "nombre",
+            "type": "string"
+        },
+        {
+            "name": "apellido",
+            "type": "string"
+
+        },
+        {
+            "name": "nombreUsuario",
+            "type": "string"
+
+        },
+        {
+            "name": "email",
+            "type": "email"
+
+        },
+        {
+            "name": "direccion",
+            "type": "string"
+
+        },
+        {
+            "name": "pais",
+            "type": "string"
+
+        },
+        {
+            "name": "ciudad",
+            "type": "string"
+
+        },
+        {
+            "name": "contraseña",
+            "type": "password"
+
+        },
+        {
+            "name": "telefono",
+            "type": "number"
+
+        },
+        {
+            "name":"tipoUsuario_id",
+            "type":"integer#unsigned"            
+
+        }
+    ],
+    "foreign_keys": [
+        {
+            "column": "tipoUsuario_id",
+            "references": "id",
+            "on": "tipoUsuario",
+            "onDelete": "cascade"
+        }
+    ],
+    "relationships": [
+        {
+            "type": "belongsTo",
+            "name": "TipoUsuario",
+            "class": "App\\TipoUsuario"
+        }
+    ],
+    "validations": [
+        {
+            "field": "nombre",
+            "rules": "required|min:5"
+        },
+        {
+            "field": "apellido",
+            "rules": "required|min:5"
+        },
+        {
+            "field": "nombreUsuario",
+            "rules": "required|min:5"
+        },
+        {
+            "field": "telefono",
+            "rules": "required|min:10"
+        }
+    ]
+
+}

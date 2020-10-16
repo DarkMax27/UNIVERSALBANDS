@@ -1,0 +1,36 @@
+{"model_name":"TipoUsuario",
+    "soft_deletes":"yes",
+    "pk":"id",
+    "localize":"yes",
+    "table":"tipoUsuarios",
+    "fields":[
+        {
+
+            "name": "nombreTipoUsuario",
+            "type": "string"
+        },
+        {
+            "name": "subscripcionUsuario",
+            "type": "string"
+
+        }
+    ],
+    "relationships": [
+        {
+            "type": "hasMany",
+            "name": "Usuario",
+            "class": "App\\Usuario"
+        }
+    ],
+    "validations": [
+        {
+            "field": "nombreTipoUsuario",
+            "rules": "required|min:5"
+        },
+        {
+            "field": "subscripcionUsuario",
+            "rules": "required|min:5"
+        }
+    ]
+
+}
