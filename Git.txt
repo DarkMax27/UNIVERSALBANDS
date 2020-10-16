@@ -4,13 +4,13 @@ Accede a la carpeta que se creo al clonarse (si te falla ala tratar de subir un 
 Antes de hacer esto debes de usar git pull pero ten encuenta que talvez se borren tus archivos 
 aparte debes de hacer esto para no borrar los archivos de otros
 mejor avisa en whatsapp que vas a commitear algo >:v
-
+git remote add origin https://github.com/DarkMax27/UNIVERSALBANDS.git (Solo una vez se usa ya las demas veces no)
 para subir usar 
 git init (1 necesario)
 git add -A (2 necesario)
 git status (Solo es para verificar)
 git commit -m "Version" (3 necesario)
-git remote add origin https://github.com/DarkMax27/UNIVERSALBANDS.git (Solo una vez se usa ya las demas veces no)
+
 git pull (no creo que sea necesario prueben no utilizar este y si no da error es que no es necesario)
 git push (5 necesario)
 
