@@ -1,5 +1,6 @@
 PERDON POR MI FALTA DE ORTOGRAFIA D:
 clonar el repositorio dentro de la carpeta que quieras xd
+git clone https://github.com/DarkMax27/UNIVERSALBANDS.git
 Accede a la carpeta que se creo al clonarse (si te falla ala tratar de subir un cambio puede ser eso)
 Antes de hacer esto debes de usar git pull pero ten en cuenta que talvez se borren tus archivos 
 aparte debes de hacer esto para no borrar los archivos de otros
