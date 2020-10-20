@@ -1,0 +1,38 @@
+{"model_name":"TipoDePaquete",
+    "soft_deletes":"yes",
+    "pk":"id",
+    "localize":"yes",
+    "table":"tipoDePaquetes",
+    "fields":[
+        {
+
+            "name": "tipoPaquete",
+            "type": "string"
+        },
+        {
+            "name": "descripcion",
+            "type": "text"
+        },
+        {
+            "name": "disponibles",
+            "type": "boolean"
+
+        }
+        
+    ],
+    "relationships": [
+        {
+            "type": "hasMany",
+            "name": "Producto",
+            "class": "App\\Producto"
+        }
+    ],
+    "validations": [
+        {
+            "field": "tipoPaquete",
+            "rules": "required|min:5"
+        }
+        
+    ]
+
+}

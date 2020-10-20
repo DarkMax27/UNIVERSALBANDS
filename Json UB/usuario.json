@@ -59,7 +59,7 @@
         {
             "column": "tipoUsuario_id",
             "references": "id",
-            "on": "tipoUsuario",
+            "on": "tipoUsuarios",
             "onDelete": "cascade"
         }
     ],

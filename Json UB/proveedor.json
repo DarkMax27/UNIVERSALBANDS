@@ -1,0 +1,74 @@
+{"model_name":"Proveedor",
+    "soft_deletes":"yes",
+    "pk":"id",
+    "localize":"yes",
+    "table":"proveedores",
+    "fields":[
+        {
+
+            "name": "nombreCompania",
+            "type": "string"
+        },
+        {
+            "name": "nombreContacto",
+            "type": "string"
+
+        },
+        {
+            "name": "telefono",
+            "type": "number"
+
+        },
+        {
+            "name": "descripcion",
+            "type": "text"
+        },
+        {
+            "name": "ciudad",
+            "type": "string"
+
+        },
+        {
+            "name": "codigoPostal",
+            "type": "string"
+
+        },
+        {
+            "name": "pais",
+            "type": "string"
+
+        },
+        {
+            "name": "homePage",
+            "type": "string"
+
+        }
+    ],
+    "relationships": [
+        {
+            "type": "hasMany",
+            "name": "Producto",
+            "class": "App\\Producto"
+        }
+    ],
+    "validations": [
+        {
+            "field": "nombreCompania",
+            "rules": "required|min:5"
+        },
+        {
+            "field": "nombreContacto",
+            "rules": "required|min:5"
+        },
+        {
+            "field": "telefono",
+            "rules": "required|min:10"
+        },
+        {
+            "field": "codigoPostal",
+            "rules": "required|min:5"
+        }
+        
+    ]
+
+}

@@ -1,0 +1,50 @@
+{"model_name":"Inventario",
+    "soft_deletes":"yes",
+    "pk":"id",
+    "localize":"yes",
+    "table":"inventarios",
+    "fields":[
+        {
+
+            "name": "nombreProducto2",
+            "type": "string"
+        },
+        {
+            "name": "undadesDisponibles",
+            "type": "number"
+
+        },
+        {
+            "name": "ultimaActualizacion",
+            "type": "datetime"
+
+        },
+        {
+            "name":"banda_id",
+            "type":"integer#unsigned"            
+
+        }
+    ],
+    "foreign_keys": [
+        {
+            "column": "banda_id",
+            "references": "id",
+            "on": "bandas",
+            "onDelete": "cascade"
+        }
+    ],
+    "relationships": [
+        {
+            "type": "belongsTo",
+            "name": "Banda",
+            "class": "App\\Banda"
+        }
+    ],
+    "validations": [
+        {
+            "field": "nombreProducto2",
+            "rules": "required|min:5"
+        }
+    ]
+
+}

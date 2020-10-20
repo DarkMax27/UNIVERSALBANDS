@@ -1,0 +1,33 @@
+{"model_name":"Banda",
+    "soft_deletes":"yes",
+    "pk":"id",
+    "localize":"yes",
+    "table":"bandas",
+    "fields":[
+        {
+
+            "name": "tipoBanda",
+            "type": "string"
+        },
+        {
+            "name": "descripcionBanda",
+            "type": "text"
+
+        }
+    ],
+    "relationships": [
+        {
+            "type": "hasMany",
+            "name": "Inventario",
+            "class": "App\\Inventario"
+        }
+    ],
+    "validations": [
+      
+        {
+            "field": "descripcionPermiso",
+            "rules": "required|min:5"
+        }
+    ]
+
+}
