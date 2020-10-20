@@ -18,8 +18,8 @@
     "relationships": [
         {
             "type": "hasMany",
-            "name": "Usuario",
-            "class": "App\\Usuario"
+            "name": "PermisoUsuario",
+            "class": "App\\PermisoUsuario"
         }
     ],
     "validations": [

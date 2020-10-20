@@ -1,0 +1,52 @@
+{"model_name":"PermisoUsuario",
+    "soft_deletes":"yes",
+    "pk":"id",
+    "localize":"yes",
+    "table":"permisoUsuarios",
+    "fields":[
+        {
+
+            "name":"permiso_id",
+            "type":"integer#unsigned"            
+
+        },
+        {
+            "name":"usuario_id",
+            "type":"integer#unsigned"            
+
+
+        }
+    ],
+    "foreign_keys": [
+        {
+            "column": "permiso_id",
+            "references": "id",
+            "on": "permisos",
+            "onDelete": "cascade"
+        },
+        {
+            "column": "usuario_id",
+            "references": "id",
+            "on": "usuarios",
+            "onDelete": "cascade" 
+        }
+    ],
+    "relationships": [
+        {
+            "type": "belongsToMany",
+            "name": "Permiso",
+            "class": "App\\Permiso"
+        },
+        {
+            "type": "belongsToMany",
+            "name": "Usuario",
+            "class": "App\\Usuario"
+        }
+        
+
+    ],
+    "validations": [
+      
+    ]
+
+}
