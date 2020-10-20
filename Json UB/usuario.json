@@ -68,6 +68,11 @@
             "type": "belongsTo",
             "name": "TipoUsuario",
             "class": "App\\TipoUsuario"
+        },
+        {
+            "type": "hasMany",
+            "name": "PermisoUsuario",
+            "class": "App\\PermisoUsuario"
         }
     ],
     "validations": [
