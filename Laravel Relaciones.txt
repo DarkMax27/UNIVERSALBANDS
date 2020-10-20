@@ -5,6 +5,10 @@ Eloquent: Relationships
 One To One  hasOne/hasOne (No estoy seguro)
 One To Many  hasMany/belongsTo
 One To Many (Inverse)
+<<<<<<< HEAD
 Many To Many hasMany/belongsToMan
 
 Ayudenme a investigas plox
+=======
+Many To Many hasMany/belongsToMany
+>>>>>>> 0966c9623dac58b03a773cfb555b382895dec5f4
