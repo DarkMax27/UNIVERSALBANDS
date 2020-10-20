@@ -1,17 +1,10 @@
 https://laravel.com/docs/8.x/eloquent-relationships
 
 Eloquent: Relationships
-Introduction
-Defining Relationships
-One To One
-One To Many
+
+One To One  hasOne/hasOne (No estoy seguro)
+One To Many  hasMany/belongsTo
 One To Many (Inverse)
-Many To Many
-Defining Custom Intermediate Table Models
-Has One Through
-Has Many Through
-Polymorphic Relationships
-One To One
-One To Many
-Many To Many
-Custom Polymorphic Types
+Many To Many hasMany/belongsToMan
+
+Ayudenme a investigas plox
