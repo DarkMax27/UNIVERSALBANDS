@@ -2,7 +2,7 @@ https://laravel.com/docs/8.x/eloquent-relationships
 
 Eloquent: Relationships
 
-One To One  hasOne/hasOne (No estoy seguro)
+One To One  hasOne/belongsTo (No estoy seguro)
 One To Many  hasMany/belongsTo
 One To Many (Inverse)
 Many To Many hasMany/belongsToMany
