@@ -1,0 +1,35 @@
+{"model_name":"Salida",
+    "soft_deletes":"yes",
+    "pk":"id",
+    "localize":"yes",
+    "table":"salidas",
+    "fields":[
+        {
+            "name": "numeroSalidas",
+            "type": "string"
+        },
+        {
+            "name":"evento_id",
+            "type":"integer#unsigned"            
+        }
+    ],
+    "foreign_keys": [
+        {
+            "column": "evento_id",
+            "references": "id",
+            "on": "eventos",
+            "onDelete": "cascade"
+        }
+    ],
+    "relationships": [
+        {
+            "type": "belongsTo",
+            "name": "Evento",
+            "class": "App\\Evento"
+        }
+    ],
+    "validations": [
+        
+    ]
+
+}

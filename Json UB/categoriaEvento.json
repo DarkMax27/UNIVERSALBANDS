@@ -1,0 +1,38 @@
+{"model_name":"CategoriaEvento",
+    "soft_deletes":"yes",
+    "pk":"id",
+    "localize":"yes",
+    "table":"categoriaEventos",
+    "fields":[
+        {
+
+            "name": "categoria",
+            "type": "string"
+        },
+        {
+            "name": "descripcionCategoria",
+            "type": "text"
+
+        },
+        {
+            "name": "popularidad",
+            "type": "string"
+
+        }
+    ],
+    "relationships": [
+        {
+            "type": "hasOne",
+            "name": "Evento",
+            "class": "App\\Evento"
+        }
+    ],
+    "validations": [
+      
+        {
+            "field": "categoria",
+            "rules": "required|min:5"
+        }
+    ]
+
+}

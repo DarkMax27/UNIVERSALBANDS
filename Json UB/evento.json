@@ -1,0 +1,83 @@
+{"model_name":"Evento",
+    "soft_deletes":"yes",
+    "pk":"id",
+    "localize":"yes",
+    "table":"eventos",
+    "fields":[
+        {
+
+            "name": "nombre",
+            "type": "string"
+        },
+        {
+            "name": "direccion",
+            "type": "string"
+
+        },
+        {
+            "name": "pais",
+            "type": "string"
+
+        },
+        {
+            "name": "ciudad",
+            "type": "string"
+
+        },
+        {
+            "name": "fechas",
+            "type": "datetime"
+
+        },
+        {
+            "name":"cliente_id",
+            "type":"integer#unsigned"            
+
+        },
+        {
+            "name":"categoriaEvento_id",
+            "type":"integer#unsigned"            
+
+        }
+       
+    ],
+    "foreign_keys": [
+      
+        {
+            "column": "cliente_id",
+            "references": "id",
+            "on": "clientes",
+            "onDelete": "cascade"
+        }, 
+         {
+            "column": "categoriaEvento_id",
+            "references": "id",
+            "on": "categoriaEventos",
+            "onDelete": "cascade"
+        }
+    ],
+    "relationships": [
+        
+        {
+            "type": "belongsTo",
+            "name": "Cliente",
+            "class": "App\\Cliente"
+        },
+        {
+            "type": "belongsTo",
+            "name": "CategoriaEvento",
+            "class": "App\\CategoriaEvento"
+        }
+    ],
+    "validations": [
+        {
+            "field": "nombre",
+            "rules": "required|min:5"
+        },
+        {
+            "field": "direccion",
+            "rules": "required|min:5"
+        }
+    ]
+
+}

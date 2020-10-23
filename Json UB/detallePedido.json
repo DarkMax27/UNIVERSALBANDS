@@ -1,0 +1,63 @@
+{"model_name":"DetallePedido",
+    "soft_deletes":"yes",
+    "pk":"id",
+    "localize":"yes",
+    "table":"detallepedidos",
+    "fields":[
+        {
+
+            "name": "cantidad",
+            "type": "integer"
+        },
+        {
+            "name": "subTotal",
+            "type": "double"
+
+        },
+        {
+            "name": "total",
+            "type": "double"
+
+        },
+        {
+            "name":"producto_id",
+            "type":"integer#unsigned"            
+
+        },
+        {
+            "name":"pedido_id",
+            "type":"integer#unsigned"            
+
+        }
+    ],
+    "foreign_keys": [
+        {
+            "column": "producto_id",
+            "references": "id",
+            "on": "productos",
+            "onDelete": "cascade"
+        },
+        {
+            "column": "pedido_id",
+            "references": "id",
+            "on": "pedidos",
+            "onDelete": "cascade"
+        }
+    ],
+    "relationships": [
+        {
+            "type": "belongsTo",
+            "name": "Producto",
+            "class": "App\\Producto"
+        },
+        {
+            "type": "belongsTo",
+            "name": "Pedido",
+            "class": "App\\Pedido"
+        }
+    ],
+    "validations": [
+       
+    ]
+
+}

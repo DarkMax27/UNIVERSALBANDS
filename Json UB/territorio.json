@@ -1,0 +1,39 @@
+{"model_name":"Territorio",
+    "soft_deletes":"yes",
+    "pk":"id",
+    "localize":"yes",
+    "table":"territorios",
+    "fields":[
+        {
+            "name": "nombre",
+            "type": "string"
+        },
+        {
+            "name":"descripcionTerritorio",
+            "type":"text"            
+        },
+        {
+            "name":"region_id",
+            "type":"integer#unsigned"            
+        }
+    ],
+    "foreign_keys": [
+        {
+            "column": "region_id",
+            "references": "id",
+            "on": "regiones",
+            "onDelete": "cascade"
+        }
+    ],
+    "relationships": [
+        {
+            "type": "belongsTo",
+            "name": "Region",
+            "class": "App\\Region"
+        }
+    ],
+    "validations": [
+        
+    ]
+
+}

@@ -1,0 +1,33 @@
+{"model_name":"CompraEnvio",
+    "soft_deletes":"yes",
+    "pk":"id",
+    "localize":"yes",
+    "table":"compraEnvios",
+    "fields":[
+        {
+
+            "name": "nombreCompania",
+            "type": "string"
+        },
+        {
+            "name": "telefono",
+            "type": "number"
+
+        }
+    ],
+    "relationships": [
+        {
+            "type": "hasMany",
+            "name": "Pedido",
+            "class": "App\\Pedido"
+        }
+    ],
+    "validations": [
+      
+        {
+            "field": "nombreCompania",
+            "rules": "required|min:5"
+        }
+    ]
+
+}

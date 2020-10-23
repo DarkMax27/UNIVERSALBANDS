@@ -1,0 +1,37 @@
+{"model_name":"EventoAnterior",
+    "soft_deletes":"yes",
+    "pk":"id",
+    "localize":"yes",
+    "table":"eventoAnteriores",
+    "fields":[
+        {
+
+            "name": "nombre",
+            "type": "string"
+        },
+        {
+            "name": "entradas",
+            "type": "integer"
+
+        },
+        {
+            "name": "fecha",
+            "type": "datetime"
+        }
+    ],
+    "relationships": [
+        {
+            "type": "hasMany",
+            "name": "Cliente",
+            "class": "App\\Cliente"
+        }
+    ],
+    "validations": [
+      
+        {
+            "field": "nombre",
+            "rules": "required|min:5"
+        }
+    ]
+
+}

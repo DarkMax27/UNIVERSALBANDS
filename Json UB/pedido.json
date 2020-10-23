@@ -1,0 +1,104 @@
+{"model_name":"Pedido",
+    "soft_deletes":"yes",
+    "pk":"id",
+    "localize":"yes",
+    "table":"pedidos",
+    "fields":[
+        {
+
+            "name": "fechaPedido",
+            "type": "datetime"
+        },
+        {
+            "name": "fechaEntrega",
+            "type": "datetime"
+
+        },
+        {
+            "name": "fechaEnvio",
+            "type": "datetime"
+
+        },
+        {
+            "name": "flete",
+            "type": "string"
+
+        },
+        {
+            "name": "nombreDestinatario",
+            "type": "string"
+
+        },
+        {
+            "name": "direccionDestinatario",
+            "type": "string"
+
+        },
+        {
+            "name": "ciudadDestinatario",
+            "type": "string"
+
+        },
+        {
+            "name": "regionDestinatario",
+            "type": "string"
+
+        },
+        {
+            "name": "paisDestinatario",
+            "type": "string"
+
+        },
+        {
+            "name":"compraEnvio_id",
+            "type":"integer#unsigned"            
+
+        },
+        {
+            "name":"cliente_id",
+            "type":"integer#unsigned"            
+
+        }
+    ],
+    "foreign_keys": [
+        {
+            "column": "compraEnvio_id",
+            "references": "id",
+            "on": "compraEnvios",
+            "onDelete": "cascade"
+        },
+        {
+            "column": "cliente_id",
+            "references": "id",
+            "on": "clientes",
+            "onDelete": "cascade"
+        }
+    ],
+    "relationships": [
+        {
+            "type": "belongsTo",
+            "name": "CompraEnvio",
+            "class": "App\\CompraEnvio"
+        },
+        {
+            "type": "belongsTo",
+            "name": "Cliente",
+            "class": "App\\Cliente"
+        }
+    ],
+    "validations": [
+        {
+            "field": "nombreDestinatario",
+            "rules": "required|min:5"
+        },
+        {
+            "field": "direccionDestinatario",
+            "rules": "required|min:5"
+        },
+        {
+            "field": "ciudadDestinatario",
+            "rules": "required|min:5"
+        }
+    ]
+
+}

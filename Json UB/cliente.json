@@ -1,0 +1,146 @@
+{"model_name":"Cliente",
+    "soft_deletes":"yes",
+    "pk":"id",
+    "localize":"yes",
+    "table":"clientes",
+    "fields":[
+        {
+
+            "name": "nombreCompania",
+            "type": "string"
+        },
+        {
+            "name": "nombreContacto",
+            "type": "string"
+
+        },
+        {
+            "name": "email",
+            "type": "email"
+
+        },
+        {
+            "name": "direccion",
+            "type": "string"
+
+        },
+        {
+            "name": "pais",
+            "type": "string"
+
+        },
+        {
+            "name": "ciudad",
+            "type": "string"
+
+        },
+        {
+            "name": "codigoPostal",
+            "type": "string"
+
+        },
+        {
+            "name": "telefono",
+            "type": "number"
+
+        },
+        {
+            "name":"categoriaCliente_id",
+            "type":"integer#unsigned"            
+
+        },
+        {
+            "name":"usuario_id",
+            "type":"integer#unsigned"            
+
+        },
+        {
+            "name":"soporte_id",
+            "type":"integer#unsigned"            
+
+        },
+        {
+            "name":"eventoAnterior_id",
+            "type":"integer#unsigned"            
+
+        }
+    ],
+    "foreign_keys": [
+        {
+            "column": "categoriaCliente_id",
+            "references": "id",
+            "on": "categoriaClientes",
+            "onDelete": "cascade"
+        },
+        {
+            "column": "usuario_id",
+            "references": "id",
+            "on": "usuarios",
+            "onDelete": "cascade"
+        },
+        {
+            "column": "soporte_id",
+            "references": "id",
+            "on": "soportes",
+            "onDelete": "cascade"
+        },
+        {
+            "column": "eventoAnterior_id",
+            "references": "id",
+            "on": "eventoAnteriores",
+            "onDelete": "cascade"
+        }
+    ],
+    "relationships": [
+        {
+            "type": "belongsTo",
+            "name": "CategoriaCliente",
+            "class": "App\\CategoriaCliente"
+        },
+        {
+            "type": "hasMany",
+            "name": "Usuario",
+            "class": "App\\Usuario"
+        }, 
+        {
+            "type": "belongsTo",
+            "name": "Soporte",
+            "class": "App\\Soporte"
+        },
+         {
+            "type": "belongsTo",
+            "name": "EventoAnterior",
+            "class": "App\\EventoAnterior"
+        },
+        {
+            "type": "hasMany",
+            "name": "Evento",
+            "class": "App\\Evento"
+        },
+        {
+            "type": "hasOne",
+            "name": "TerritorioCliente",
+            "class": "App\\TerritorioCliente"
+        },
+        {
+            "type": "hasMany",
+            "name": "Pedido",
+            "class": "App\\Pedido"
+        }
+    ],
+    "validations": [
+        {
+            "field": "nombreCompania",
+            "rules": "required|min:5"
+        },
+        {
+            "field": "nombreContacto",
+            "rules": "required|min:5"
+        },
+        {
+            "field": "telefono",
+            "rules": "required|min:10"
+        }
+    ]
+
+}

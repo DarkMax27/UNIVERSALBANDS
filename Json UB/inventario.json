@@ -6,7 +6,7 @@
     "fields":[
         {
 
-            "name": "nombreProducto2",
+            "name": "nombreProducto",
             "type": "string"
         },
         {

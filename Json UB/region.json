@@ -1,0 +1,30 @@
+{"model_name":"Region",
+    "soft_deletes":"yes",
+    "pk":"id",
+    "localize":"yes",
+    "table":"regiones",
+    "fields":[
+        {
+
+            "name": "nombreRegion",
+            "type": "string"
+        },
+        {
+            "name": "descripcionRegion",
+            "type": "string"
+
+        }
+    ],
+    "relationships": [
+        {
+            "type": "hasMany",
+            "name": "Usuario",
+            "class": "App\\Usuario"
+        }
+    ],
+    "validations": [
+      
+        
+    ]
+
+}

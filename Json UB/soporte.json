@@ -1,0 +1,44 @@
+{"model_name":"Soporte",
+    "soft_deletes":"yes",
+    "pk":"id",
+    "localize":"yes",
+    "table":"soportes",
+    "fields":[
+        {
+
+            "name": "solicitudSoporte",
+            "type": "string"
+        },
+        {
+            "name": "solicitudesResueltas",
+            "type": "integer"
+
+        },
+        {
+            "name": "solicitudesPendientes",
+            "type": "integer"
+
+        },
+        {
+            "name": "actualizaciones",
+            "type": "integer"
+
+        },
+        {
+            "name": "fechaHora",
+            "type": "datetime"
+        }
+    ],
+    "relationships": [
+        {
+            "type": "hasMany",
+            "name": "Cliente",
+            "class": "App\\Cliente"
+        }
+    ],
+    "validations": [
+      
+       
+    ]
+
+}

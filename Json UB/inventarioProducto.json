@@ -1,52 +1,51 @@
-{"model_name":"PermisoUsuario",
+{"model_name":"InventarioPorducto",
     "soft_deletes":"yes",
     "pk":"id",
     "localize":"yes",
-    "table":"permisoUsuarios",
+    "table":"inventarioPorductos",
     "fields":[
         {
-
-            "name":"permiso_id",
-            "type":"integer#unsigned"            
+            "name": "stock",
+            "type": "integer"
 
         },
         {
-            "name":"usuario_id",
+            "name":"inventario_id",
             "type":"integer#unsigned"            
-
-
+        },
+        {
+            "name":"producto_id",
+            "type":"integer#unsigned"            
         }
     ],
     "foreign_keys": [
         {
-            "column": "permiso_id",
+            "column": "inventario_id",
             "references": "id",
-            "on": "permisos",
+            "on": "intentarios",
             "onDelete": "cascade"
         },
         {
-            "column": "usuario_id",
+            "column": "producto_id",
             "references": "id",
-            "on": "usuarios",
-            "onDelete": "cascade" 
+            "on": "productos",
+            "onDelete": "cascade"
         }
     ],
     "relationships": [
         {
             "type": "belongsTo",
-            "name": "Permiso",
-            "class": "App\\Permiso"
+            "name": "Inventario",
+            "class": "App\\Inventario"
         },
         {
             "type": "belongsTo",
-            "name": "Usuario",
-            "class": "App\\Usuario"
+            "name": "Producto",
+            "class": "App\\Producto"
         }
-        
-
     ],
     "validations": [
-      
+        
     ]
 
 }

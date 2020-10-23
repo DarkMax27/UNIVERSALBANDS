@@ -1,52 +1,46 @@
-{"model_name":"PermisoUsuario",
+{"model_name":"TerritorioCliente",
     "soft_deletes":"yes",
     "pk":"id",
     "localize":"yes",
-    "table":"permisoUsuarios",
+    "table":"territorioClientes",
     "fields":[
         {
-
-            "name":"permiso_id",
+            "name":"cliente_id",
             "type":"integer#unsigned"            
-
         },
         {
-            "name":"usuario_id",
+            "name":"territorio_id",
             "type":"integer#unsigned"            
-
-
         }
     ],
     "foreign_keys": [
         {
-            "column": "permiso_id",
+            "column": "cliente_id",
             "references": "id",
-            "on": "permisos",
+            "on": "clientes",
             "onDelete": "cascade"
         },
         {
-            "column": "usuario_id",
+            "column": "territorio_id",
             "references": "id",
-            "on": "usuarios",
-            "onDelete": "cascade" 
+            "on": "territorios",
+            "onDelete": "cascade"
         }
     ],
     "relationships": [
         {
             "type": "belongsTo",
-            "name": "Permiso",
-            "class": "App\\Permiso"
+            "name": "Cliente",
+            "class": "App\\Cliente"
         },
         {
             "type": "belongsTo",
-            "name": "Usuario",
-            "class": "App\\Usuario"
+            "name": "Territorio",
+            "class": "App\\Territorio"
         }
-        
-
     ],
     "validations": [
-      
+        
     ]
 
 }

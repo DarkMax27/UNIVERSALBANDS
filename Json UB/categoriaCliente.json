@@ -1,0 +1,37 @@
+{"model_name":"CategoriaCliente",
+    "soft_deletes":"yes",
+    "pk":"id",
+    "localize":"yes",
+    "table":"categoriaClientes",
+    "fields":[
+        {
+
+            "name": "categoria",
+            "type": "string"
+        },
+        {
+            "name": "descripcionCategoria",
+            "type": "text"
+
+        },
+        {
+            "name": "tendenciaCtegoria",
+            "type":"integer"
+        }
+    ],
+    "relationships": [
+        {
+            "type": "hasMany",
+            "name": "Cliente",
+            "class": "App\\Cliente"
+        }
+    ],
+    "validations": [
+      
+        {
+            "field": "categoria",
+            "rules": "required|min:5"
+        }
+    ]
+
+}
