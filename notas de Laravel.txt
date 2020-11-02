@@ -20,8 +20,8 @@ Rehacer cambios
 php artisan migrate
 Instalacion de adminLTE
 Instalacion
-composer global require "acacha/adminlte-laravel-installer"
-adminlte-laravel install
+composer global require "acacha/adminlte-laravel-installer"   ///  composer require jeroennoten/laravel-adminlte
+adminlte-laravel install                                      /// php artisan adminlte:install
 Instalacion de Laravel CRUD Generator
 Instalacion Crud Generator
 
